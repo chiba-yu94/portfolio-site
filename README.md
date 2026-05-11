@@ -1,2 +1,0 @@
-# portfolio-site
-app no
