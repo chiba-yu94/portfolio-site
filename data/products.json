@@ -1,0 +1,671 @@
+{
+  "schema_version": 1,
+  "brand": "Yutchi Apps",
+  "contact": "yutchi.apps@gmail.com",
+  "products": [
+    {
+      "id": "csv-preflight",
+      "store_name": "CSV Preflight",
+      "name": {
+        "ja": "CSV Preflight",
+        "en": "CSV Preflight"
+      },
+      "platform": "macOS",
+      "summary": {
+        "ja": "取り込み前にCSVの構造、重複、文字の問題をMac内で確認。",
+        "en": "Check CSV structure, duplicates, and character issues before importing."
+      },
+      "features": {
+        "ja": [
+          "UTF-8／BOM付きUTF-16、区切り文字、引用符、改行を検査",
+          "ヘッダー、列数、重複行、空欄、不可視文字を確認",
+          "選択列の一意性・必須・文字数・UTF-8バイト数ルール",
+          "CSV検査レポートを保存"
+        ],
+        "en": [
+          "Inspect encoding, delimiters, quoting, and line endings",
+          "Find header, column-count, duplicate-row, and hidden-character issues",
+          "Apply optional uniqueness, required-value, character, and byte-length rules",
+          "Export a CSV issue report"
+        ]
+      },
+      "limits": {
+        "ja": [
+          "CSVを修復する機能はありません",
+          "先頭行をヘッダーとして扱い、最大256MB、重複検査は先頭500,000行、レポートは最大10,000件",
+          "すべての取り込み先との互換性を保証しません"
+        ],
+        "en": [
+          "Inspection only; no CSV repair",
+          "First row is treated as the header; 256 MB file limit, duplicate checks on the first 500,000 rows, and up to 10,000 reported issues",
+          "Does not guarantee compatibility with every importer"
+        ]
+      },
+      "privacy": {
+        "ja": "選択したCSVをMac内で処理。ネットワーク通信、アカウント、広告、解析、トラッキングはありません。",
+        "en": "Selected CSV files are processed locally. No network requests, accounts, advertising, analytics, or tracking."
+      },
+      "category": "Developer Tools",
+      "version": "1.0.0",
+      "verified_date": "2026-10-26",
+      "release_status": "released",
+      "availability": {
+        "us": true,
+        "jp": true
+      },
+      "store_url": "https://apps.apple.com/us/app/csv-preflight/id6820027859",
+      "store_urls": {
+        "us": "https://apps.apple.com/us/app/csv-preflight/id6820027859",
+        "jp": "https://apps.apple.com/jp/app/csv-preflight/id6820027859"
+      },
+      "source_urls": [
+        "https://itunes.apple.com/lookup?id=6820027859&country=us",
+        "https://itunes.apple.com/lookup?id=6820027859&country=jp",
+        "https://chiba-yu94.github.io/preflight-tools-site/privacy/",
+        "https://chiba-yu94.github.io/preflight-tools-site/ja/privacy/",
+        "https://chiba-yu94.github.io/preflight-tools-site/support/",
+        "https://chiba-yu94.github.io/preflight-tools-site/ja/support/"
+      ],
+      "problem": {
+        "ja": "取り込みで失敗する前に、CSVの問題を確認。",
+        "en": "Find common CSV problems before an import fails."
+      },
+      "audience": {
+        "ja": "データを別のツールへ取り込む前に、文字コードや列の構造を確認したい方へ。ファイルを開くかドロップして、検出された問題を行・列とともに確認できます。",
+        "en": "For people preparing data imports who want to review encoding and row structure first. Open or drop a file, inspect findings by row and column, and export an issue report."
+      },
+      "faq": {
+        "ja": [
+          [
+            "CSVを自動修復できますか？",
+            "いいえ。検査とレポート保存のためのアプリです。元のCSVを自動修復・書き換えする機能はありません。"
+          ],
+          [
+            "どの文字コードに対応していますか？",
+            "UTF-8とBOM付きUTF-16に対応します。それ以外の文字コードは未対応として表示します。"
+          ],
+          [
+            "ファイルを外部へ送信しますか？",
+            "検査はMac内で行います。アカウントやクラウドへのアップロードは必要ありません。"
+          ]
+        ],
+        "en": [
+          [
+            "Does it repair CSV files?",
+            "No. CSV Preflight inspects files and exports reports. It does not automatically repair or rewrite the original CSV."
+          ],
+          [
+            "Which encodings are supported?",
+            "UTF-8 and BOM-marked UTF-16. Other encodings are reported as unsupported."
+          ],
+          [
+            "Do files leave my Mac?",
+            "Inspection is local. No account or cloud upload is needed."
+          ]
+        ]
+      },
+      "support_note": {
+        "ja": "ファイルを開くかウインドウにドロップして検査します。先頭行はヘッダーです。文字コードのエラーでは、元の作成ツールからUTF-8またはBOM付きUTF-16で出力し直してください。",
+        "en": "Open or drop a CSV to inspect it. The first row is treated as a header. For unsupported encoding, export a new UTF-8 or BOM-marked UTF-16 file from the original tool."
+      },
+      "support_url": {
+        "ja": "https://chiba-yu94.github.io/preflight-tools-site/ja/support/",
+        "en": "https://chiba-yu94.github.io/preflight-tools-site/support/"
+      },
+      "privacy_url": {
+        "ja": "https://chiba-yu94.github.io/preflight-tools-site/ja/privacy/",
+        "en": "https://chiba-yu94.github.io/preflight-tools-site/privacy/"
+      },
+      "os": {
+        "ja": "macOS 14以降",
+        "en": "macOS 14+"
+      },
+      "languages": {
+        "ja": "日本語・英語",
+        "en": "English & Japanese"
+      },
+      "price": {
+        "ja": "¥2,500 · 買い切り",
+        "en": "$14.99 · one-time purchase"
+      },
+      "schema_price": 14.99,
+      "currency": "USD",
+      "icon": "assets/icons/csv-preflight.png",
+      "screenshots": [
+        {
+          "src": "assets/screenshots/csv-preflight/en-desktop-02.jpg",
+          "width": 1280,
+          "height": 800,
+          "alt": {
+            "ja": "CSVの検査結果（英語画面）",
+            "en": "CSV inspection findings (English UI)"
+          }
+        },
+        {
+          "src": "assets/screenshots/csv-preflight/en-desktop-01.jpg",
+          "width": 1280,
+          "height": 800,
+          "alt": {
+            "ja": "ファイルを開く画面（英語）",
+            "en": "Open a CSV (English UI)"
+          }
+        },
+        {
+          "src": "assets/screenshots/csv-preflight/en-desktop-03.jpg",
+          "width": 1280,
+          "height": 800,
+          "alt": {
+            "ja": "ダークモードでの検査結果",
+            "en": "Inspection in dark mode"
+          }
+        }
+      ],
+      "prices": {
+        "us": {
+          "price": 14.99,
+          "formattedPrice": "$14.99",
+          "currency": "USD"
+        },
+        "jp": {
+          "price": 2500.0,
+          "formattedPrice": "¥2,500",
+          "currency": "JPY"
+        }
+      }
+    },
+    {
+      "id": "file-transfer-preflight",
+      "store_name": "File Transfer Preflight",
+      "name": {
+        "ja": "File Transfer Preflight",
+        "en": "File Transfer Preflight"
+      },
+      "platform": "macOS",
+      "summary": {
+        "ja": "フォルダやZIPを渡す前に、ファイル名とパスの互換性を確認。",
+        "en": "Check filenames and paths before handing off a folder or ZIP."
+      },
+      "features": {
+        "ja": [
+          "Windows／Office、OneDrive／SharePoint、クロスプラットフォームZIPの検査プロファイル",
+          "予約名、使えない文字、長いパス、大小文字・Unicodeの衝突を検出",
+          "任意の転送先ルートからパス長を概算",
+          "理由と対処案を確認し、CSV／HTMLレポートを保存"
+        ],
+        "en": [
+          "Windows / Office, OneDrive / SharePoint, and cross-platform ZIP profiles",
+          "Check reserved names, invalid characters, long paths, and case or Unicode collisions",
+          "Estimate resulting paths using an optional destination root",
+          "Review explanations and suggestions; export CSV or HTML reports"
+        ]
+      },
+      "limits": {
+        "ja": [
+          "ファイル内容や受信側アプリでの動作を検証するものではありません",
+          "元のファイルを変更せず、ZIPは展開せずに検査",
+          "最大100,000項目。転送成功を保証しません"
+        ],
+        "en": [
+          "Checks names, paths, and metadata rather than file contents or recipient-app compatibility",
+          "Does not modify originals; ZIPs are inspected without extraction",
+          "Up to 100,000 entries; does not guarantee transfer success"
+        ]
+      },
+      "privacy": {
+        "ja": "検査はMac内で完結。ネットワーク通信、アカウント、広告、解析はありません。レポートの名前・パスには機密情報が含まれる場合があります。",
+        "en": "Local inspection with no network access, account, advertising, or analytics. Exported names and paths may themselves be confidential."
+      },
+      "category": "Utilities",
+      "version": "1.0.0",
+      "verified_date": "2026-10-26",
+      "release_status": "released",
+      "availability": {
+        "us": true,
+        "jp": true
+      },
+      "store_url": "https://apps.apple.com/us/app/file-transfer-preflight/id6820943200",
+      "store_urls": {
+        "us": "https://apps.apple.com/us/app/file-transfer-preflight/id6820943200",
+        "jp": "https://apps.apple.com/jp/app/file-transfer-preflight/id6820943200"
+      },
+      "source_urls": [
+        "https://itunes.apple.com/lookup?id=6820943200&country=us",
+        "https://itunes.apple.com/lookup?id=6820943200&country=jp",
+        "https://chiba-yu94.github.io/preflight-tools-site/file-transfer-preflight/privacy/",
+        "https://chiba-yu94.github.io/preflight-tools-site/ja/file-transfer-preflight/privacy/",
+        "https://chiba-yu94.github.io/preflight-tools-site/file-transfer-preflight/support/",
+        "https://chiba-yu94.github.io/preflight-tools-site/ja/file-transfer-preflight/support/"
+      ],
+      "problem": {
+        "ja": "ファイルを渡す前に、名前とパスを確認。",
+        "en": "Catch filename and path issues before a handoff."
+      },
+      "audience": {
+        "ja": "フォルダやZIPをお客様・同僚へ渡す方へ。転送先の環境に合わせて、名前の制約やパス長、名前の衝突をMac内で確認します。転送やファイルの書き換えは行いません。",
+        "en": "For people delivering folders or ZIPs to clients and colleagues. Review destination-specific naming rules, path lengths, and collisions locally before you share a file."
+      },
+      "faq": {
+        "ja": [
+          [
+            "元のファイルを変更しますか？",
+            "いいえ。名前の変更・削除・移動・ZIPの書き換えは行いません。ZIPは展開せずに検査します。"
+          ],
+          [
+            "OneDriveやSharePointに接続しますか？",
+            "接続しません。選んだプロファイルのルールを使い、名前とパスをMac内で検査します。"
+          ],
+          [
+            "受け渡し後の動作を保証できますか？",
+            "いいえ。ファイル内容や相手のアプリで正常に開けることは検証しません。検出結果は受け渡し前の確認に役立てるための情報です。"
+          ]
+        ],
+        "en": [
+          [
+            "Does it change my files?",
+            "No. It never renames, deletes, moves, or rewrites originals. ZIP files are inspected without extraction."
+          ],
+          [
+            "Does it connect to OneDrive or SharePoint?",
+            "No. It applies the selected destination rules to names and paths locally on your Mac."
+          ],
+          [
+            "Does a clean result guarantee a successful transfer?",
+            "No. It does not validate file contents or opening files in recipient apps. Findings are guidance for review before handoff."
+          ]
+        ]
+      },
+      "support_note": {
+        "ja": "フォルダまたはZIPを選び、転送先のプロファイルを設定して検査します。転送先ルートは任意です。クラウドでは同期フォルダやURLではなく、デコード済みのライブラリパスを指定します。",
+        "en": "Choose a folder or ZIP and a destination profile, then scan. The destination root is optional. For cloud profiles, use the decoded library path rather than a local sync folder or URL."
+      },
+      "support_url": {
+        "ja": "https://chiba-yu94.github.io/preflight-tools-site/ja/file-transfer-preflight/support/",
+        "en": "https://chiba-yu94.github.io/preflight-tools-site/file-transfer-preflight/support/"
+      },
+      "privacy_url": {
+        "ja": "https://chiba-yu94.github.io/preflight-tools-site/ja/file-transfer-preflight/privacy/",
+        "en": "https://chiba-yu94.github.io/preflight-tools-site/file-transfer-preflight/privacy/"
+      },
+      "os": {
+        "ja": "macOS 14以降",
+        "en": "macOS 14+"
+      },
+      "languages": {
+        "ja": "日本語・英語",
+        "en": "English & Japanese"
+      },
+      "price": {
+        "ja": "¥1,500 · 買い切り",
+        "en": "$9.99 · one-time purchase"
+      },
+      "schema_price": 9.99,
+      "currency": "USD",
+      "icon": "assets/icons/file-transfer-preflight.png",
+      "screenshots": [
+        {
+          "src": "assets/screenshots/file-transfer-preflight/en-desktop-02.jpg",
+          "width": 1280,
+          "height": 800,
+          "alt": {
+            "ja": "ファイル名の問題と対処案（英語）",
+            "en": "Filename findings and suggested actions (English UI)"
+          }
+        },
+        {
+          "src": "assets/screenshots/file-transfer-preflight/en-desktop-03.jpg",
+          "width": 1280,
+          "height": 800,
+          "alt": {
+            "ja": "転送先のパス長の確認（英語）",
+            "en": "Destination path estimate (English UI)"
+          }
+        },
+        {
+          "src": "assets/screenshots/file-transfer-preflight/en-desktop-04.jpg",
+          "width": 1280,
+          "height": 800,
+          "alt": {
+            "ja": "名前の衝突の確認（英語）",
+            "en": "Naming collisions (English UI)"
+          }
+        }
+      ],
+      "prices": {
+        "us": {
+          "price": 9.99,
+          "formattedPrice": "$9.99",
+          "currency": "USD"
+        },
+        "jp": {
+          "price": 1500.0,
+          "formattedPrice": "¥1,500",
+          "currency": "JPY"
+        }
+      }
+    },
+    {
+      "id": "matanenote",
+      "store_name": "またねノート",
+      "name": {
+        "ja": "またねノート",
+        "en": "MataneNote"
+      },
+      "platform": "iOS",
+      "summary": {
+        "ja": "前回の会話と次の話題を残せる、接客メモアプリ。",
+        "en": "Keep customer conversation notes ready for the next visit."
+      },
+      "features": {
+        "ja": [
+          "お客様ごとに、話したこと・これからの話題・避けたい話題を整理",
+          "検索して接客前に確認",
+          "メモは端末内に保存",
+          "Proは表示枠の制限解除とQRによるメモの受け渡し"
+        ],
+        "en": [
+          "Organize previous conversations, future topics, and topics to avoid for each customer",
+          "Search notes before a conversation",
+          "Keep notes on the device",
+          "Optional Pro removes the display limit and enables QR note handoff"
+        ]
+      },
+      "limits": {
+        "ja": [
+          "無料プランは15件まで表示できます。",
+          "Proは月額500円または年額4,800円の自動更新サブスクリプションです。"
+        ],
+        "en": [
+          "The free plan displays up to 15 entries.",
+          "Pro is an auto-renewing subscription: ¥500 monthly or ¥4,800 annually in Japan."
+        ]
+      },
+      "privacy": {
+        "ja": "メモは端末内に保存。入力内容を開発者のサーバーへ送信しません。課金はAppleの仕組みを利用します。",
+        "en": "Notes stay on the device and are not sent to a developer server. Purchases use Apple's payment system."
+      },
+      "category": "Business",
+      "version": "1.0.1",
+      "verified_date": "2026-10-26",
+      "release_status": "released",
+      "availability": {
+        "us": false,
+        "jp": true
+      },
+      "store_url": "https://apps.apple.com/jp/app/%E3%81%BE%E3%81%9F%E3%81%AD%E3%83%8E%E3%83%BC%E3%83%88/id6760961992",
+      "store_urls": {
+        "jp": "https://apps.apple.com/jp/app/%E3%81%BE%E3%81%9F%E3%81%AD%E3%83%8E%E3%83%BC%E3%83%88/id6760961992"
+      },
+      "source_urls": [
+        "https://itunes.apple.com/lookup?id=6760961992&country=us",
+        "https://itunes.apple.com/lookup?id=6760961992&country=jp",
+        "https://chiba-yu94.github.io/portfolio-site/privacy/",
+        "https://chiba-yu94.github.io/portfolio-site/support/"
+      ],
+      "problem": {
+        "ja": "「前に何を話したっけ？」を、次の会話のきっかけに。",
+        "en": "Pick up the next conversation with a little more context."
+      },
+      "audience": {
+        "ja": "お客様との会話を大切にしたい接客の場面に。これまでの話題、次に話したいこと、避けたい話題を短く整理して、接客前に見返せるメモアプリです。",
+        "en": "For customer-facing work where remembering the last conversation matters. Keep short notes about past conversations, future topics, and topics to avoid, then search before the next visit. Available on the Japan App Store."
+      },
+      "faq": {
+        "ja": [
+          [
+            "無料プランでは何件まで使えますか？",
+            "無料プランは15件まで表示できます。Proでは表示枠の制限解除とQRによるメモの受け渡しを利用できます。"
+          ],
+          [
+            "Proの料金と解約方法は？",
+            "月額500円または年額4,800円の自動更新サブスクリプションです。両プランの機能は同じです。解約やプラン変更は端末の設定から行えます。"
+          ],
+          [
+            "メモはどこに保存されますか？",
+            "端末内に保存します。入力したメモを開発者のサーバーへ送信しません。QRでの受け渡しはProの機能です。"
+          ]
+        ],
+        "en": [
+          [
+            "What does the free plan include?",
+            "The free plan displays up to 15 entries. Pro removes this display limit and enables QR note handoff."
+          ],
+          [
+            "How much is Pro?",
+            "On the Japan App Store, Pro is an auto-renewing subscription of ¥500 monthly or ¥4,800 annually. Both plans have the same features. Manage or cancel in device settings."
+          ],
+          [
+            "Where are notes stored?",
+            "Notes are stored on your device and are not sent to the developer’s server. QR handoff is a Pro feature."
+          ]
+        ]
+      },
+      "support_note": {
+        "ja": "お客様ごとに話題を登録し、検索して確認できます。Proの解約・プラン変更は端末の設定から行います。お問い合わせに実際のお客様の名前やメモを含めないでください。",
+        "en": "Add topics for each customer and use search to find them. Manage Pro subscriptions in device settings. Please do not include real customer names or notes in support messages."
+      },
+      "support_url": {
+        "ja": "https://chiba-yu94.github.io/portfolio-site/support/",
+        "en": "https://chiba-yu94.github.io/portfolio-site/support/"
+      },
+      "privacy_url": {
+        "ja": "https://chiba-yu94.github.io/portfolio-site/privacy/",
+        "en": "https://chiba-yu94.github.io/portfolio-site/privacy/"
+      },
+      "os": {
+        "ja": "iOS / iPadOS 16以降",
+        "en": "iOS / iPadOS 16+"
+      },
+      "languages": {
+        "ja": "日本語 · 日本で配信",
+        "en": "Japanese · Japan storefront"
+      },
+      "price": {
+        "ja": "無料 · Proはアプリ内課金",
+        "en": "Free · optional Pro subscription"
+      },
+      "schema_price": 0.0,
+      "currency": "JPY",
+      "icon": "assets/icons/matanenote.jpg",
+      "screenshots": [
+        {
+          "src": "assets/screenshots/matanenote/ja-iphone-03.jpg",
+          "width": 1206,
+          "height": 2622,
+          "alt": {
+            "ja": "サンプルのお客様メモ一覧",
+            "en": "Customer notes with fictional examples (Japanese UI)"
+          }
+        },
+        {
+          "src": "assets/screenshots/matanenote/ja-iphone-04.jpg",
+          "width": 1206,
+          "height": 2622,
+          "alt": {
+            "ja": "お客様メモの詳細画面",
+            "en": "Customer note details (Japanese UI)"
+          }
+        },
+        {
+          "src": "assets/screenshots/matanenote/ja-iphone-02.jpg",
+          "width": 1206,
+          "height": 2622,
+          "alt": {
+            "ja": "話題を登録する画面",
+            "en": "Add conversation topics (Japanese UI)"
+          }
+        }
+      ],
+      "prices": {
+        "jp": {
+          "price": 0.0,
+          "formattedPrice": "無料",
+          "currency": "JPY"
+        }
+      }
+    },
+    {
+      "id": "signals",
+      "store_name": "SIGNALS: Code Creatures",
+      "name": {
+        "ja": "SIGNALS: Code Creatures",
+        "en": "SIGNALS: Code Creatures"
+      },
+      "platform": "iOS",
+      "summary": {
+        "ja": "バーコードから小さな情報生命体を発見し、Watchへ連れ出す。",
+        "en": "Discover little code creatures from barcodes and take a favorite to Apple Watch."
+      },
+      "features": {
+        "ja": [
+          "バーコード読み取り・手入力から個体を発見",
+          "同じコードから同じ個体に再会",
+          "研究室で動きやタップへの反応を観察",
+          "お気に入りの1体をApple Watchで観察し、対応文字盤に表示"
+        ],
+        "en": [
+          "Discover creatures by scanning or entering a barcode",
+          "Meet the same creature again from the same code",
+          "Observe movements and tap reactions in the lab",
+          "Bring one favorite to Apple Watch and supported watch-face complications"
+        ]
+      },
+      "limits": {
+        "ja": [
+          "Apple Watchは任意。Watch機能はwatchOS11以降とペアリング済みiPhoneが必要",
+          "文字盤は静止表示。動く観察窓はWatchアプリ内",
+          "商品名・メーカー・商品画像は検索しません",
+          "個別削除・エクスポートは未対応。アプリ削除で記録が失われる場合があります"
+        ],
+        "en": [
+          "Apple Watch is optional; Watch features need watchOS11+ and a paired iPhone",
+          "Watch-face complications are static; animation runs inside the Watch app",
+          "Does not search product names, manufacturers, or product images",
+          "No individual deletion or export; deleting the app may remove records"
+        ]
+      },
+      "privacy": {
+        "ja": "観測記録は端末内に保存。カメラ画像や元のコードを保存・送信しません。アカウント、広告、解析SDK、独自クラウドはありません。選んだ個体の情報はペアリング済みWatchへ転送します。",
+        "en": "Observation records stay on the device. Camera images and raw codes are not stored or sent. No accounts, ads, analytics SDKs, or developer cloud. Selected creature details transfer to the paired Watch."
+      },
+      "category": "Games / Casual / Simulation",
+      "version": "1.0",
+      "verified_date": "2026-10-26",
+      "release_status": "released",
+      "availability": {
+        "us": false,
+        "jp": true
+      },
+      "store_url": "https://apps.apple.com/jp/app/signals-code-creatures/id6820426754",
+      "store_urls": {
+        "jp": "https://apps.apple.com/jp/app/signals-code-creatures/id6820426754"
+      },
+      "source_urls": [
+        "https://itunes.apple.com/lookup?id=6820426754&country=us",
+        "https://itunes.apple.com/lookup?id=6820426754&country=jp",
+        "https://chiba-yu94.github.io/signals-support/privacy.html",
+        "https://chiba-yu94.github.io/signals-support/"
+      ],
+      "problem": {
+        "ja": "身近なコードに、小さな発見を。",
+        "en": "Find a small creature in an everyday code."
+      },
+      "audience": {
+        "ja": "バーコードから現れる小さな情報生命体を、発見・観察するコレクションゲームです。同じコードからは同じ個体に再会でき、お気に入りの1体をApple Watchへ連れ出せます。",
+        "en": "A collection game about discovering and observing little code creatures. The same barcode brings back the same creature, and one favorite can accompany you on Apple Watch. Available on the Japan App Store."
+      },
+      "faq": {
+        "ja": [
+          [
+            "Apple Watchがなくても遊べますか？",
+            "はい。Apple Watchは任意です。iPhoneではバーコード読み取りやコード入力で発見・観察できます。"
+          ],
+          [
+            "カメラの許可は必要ですか？",
+            "コードを手入力して遊ぶ場合は、カメラの許可は必要ありません。"
+          ],
+          [
+            "文字盤の個体は動きますか？",
+            "文字盤のコンプリケーションは静止表示です。動く観察窓はWatchアプリ内で利用できます。Watch機能はwatchOS 11以降とペアリング済みiPhoneが必要です。"
+          ]
+        ],
+        "en": [
+          [
+            "Do I need an Apple Watch?",
+            "No. Apple Watch is optional. You can discover and observe creatures on iPhone by scanning or entering codes."
+          ],
+          [
+            "Is camera permission required?",
+            "No camera permission is needed when you enter codes manually."
+          ],
+          [
+            "Are watch-face creatures animated?",
+            "Watch-face complications are static. Animation runs in the Watch app. Watch features require watchOS 11 or later and a paired iPhone."
+          ]
+        ]
+      },
+      "support_note": {
+        "ja": "読み取れない場合はコードを手入力できます。Apple Watchに迎えられるのはお気に入りの1体です。Watchがペアリング済みで、watchOS 11以降であることを確認してください。",
+        "en": "You can enter a code manually if scanning is unavailable. One favorite can be sent to Apple Watch. Check that the Watch is paired and runs watchOS 11 or later."
+      },
+      "support_url": {
+        "ja": "https://chiba-yu94.github.io/signals-support/",
+        "en": "https://chiba-yu94.github.io/signals-support/"
+      },
+      "privacy_url": {
+        "ja": "https://chiba-yu94.github.io/signals-support/privacy.html",
+        "en": "https://chiba-yu94.github.io/signals-support/privacy.html"
+      },
+      "os": {
+        "ja": "iOS 17以降 · Watchは任意（watchOS 11以降）",
+        "en": "iOS 17+ · optional Watch (watchOS 11+)"
+      },
+      "languages": {
+        "ja": "言語のストア記載なし · 日本で配信",
+        "en": "Languages not listed · Japan storefront"
+      },
+      "price": {
+        "ja": "無料 · 広告・アプリ内課金なし",
+        "en": "Free · no ads or in-app purchases"
+      },
+      "schema_price": 0.0,
+      "currency": "JPY",
+      "icon": "assets/icons/signals.jpg",
+      "screenshots": [
+        {
+          "src": "assets/screenshots/signals/ja-iphone-01.jpg",
+          "width": 1206,
+          "height": 2622,
+          "alt": {
+            "ja": "コードから個体を発見",
+            "en": "Discover a creature from a code (Japanese UI)"
+          }
+        },
+        {
+          "src": "assets/screenshots/signals/ja-iphone-02.jpg",
+          "width": 1206,
+          "height": 2622,
+          "alt": {
+            "ja": "研究室で個体を観察",
+            "en": "Observe a creature in the lab (Japanese UI)"
+          }
+        },
+        {
+          "src": "assets/screenshots/signals/ja-iphone-03.jpg",
+          "width": 1206,
+          "height": 2622,
+          "alt": {
+            "ja": "お気に入りをApple Watchへ",
+            "en": "Bring a favorite to Apple Watch (Japanese UI)"
+          }
+        }
+      ],
+      "prices": {
+        "jp": {
+          "price": 0.0,
+          "formattedPrice": "無料",
+          "currency": "JPY"
+        }
+      }
+    }
+  ]
+}

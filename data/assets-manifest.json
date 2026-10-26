@@ -1,0 +1,100 @@
+[
+  {
+    "path": "assets/icons/csv-preflight.png",
+    "source_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/56/e3/5f/56e35fdd-71de-f97d-3348-4e0195751409/AppIcon-0-0-85-220-0-5-0-2x.png/512x512bb.png",
+    "sha256": "c6b747b3390f5b6f696cb053d7242aabfbf99f90e4f63351b801a97a1e019f29"
+  },
+  {
+    "path": "assets/screenshots/csv-preflight/en-desktop-02.jpg",
+    "source_url": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/dd/07/b1/dd07b1df-25fd-5663-9e0f-6d012ea1484a/02-inspection.png/800x500bb.jpg",
+    "download_url": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/dd/07/b1/dd07b1df-25fd-5663-9e0f-6d012ea1484a/02-inspection.png/1280x800bb.jpg",
+    "sha256": "a2860883ebba0af5dea843212d171d76e4e707afa1bd4370e7e86a3d8a37d2d0"
+  },
+  {
+    "path": "assets/screenshots/csv-preflight/en-desktop-01.jpg",
+    "source_url": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/03/a1/48/03a14829-b85f-5365-cf93-f46e5057dcf7/01-open.png/800x500bb.jpg",
+    "download_url": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/03/a1/48/03a14829-b85f-5365-cf93-f46e5057dcf7/01-open.png/1280x800bb.jpg",
+    "sha256": "021df254a9b74e39ed88a4b2ca3f4524613ba584b74e783e17a8bc7ac44bea3f"
+  },
+  {
+    "path": "assets/screenshots/csv-preflight/en-desktop-03.jpg",
+    "source_url": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/b8/5e/52/b85e5297-de27-0e89-17d3-0bfbe3a8a154/03-dark.png/800x500bb.jpg",
+    "download_url": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/b8/5e/52/b85e5297-de27-0e89-17d3-0bfbe3a8a154/03-dark.png/1280x800bb.jpg",
+    "sha256": "b20a88700c2eb2d3612e6755905340ca84929213d839a30f6e895a37a53d870f"
+  },
+  {
+    "path": "assets/icons/file-transfer-preflight.png",
+    "source_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/4a/e4/07/4ae4074a-52d3-6ed1-85d9-bfa6613737cc/AppIcon-0-0-85-220-0-5-0-2x.png/512x512bb.png",
+    "sha256": "7c8ff6c0be050bc06fb4dfc638057ee616e5dad0d4abae0ef3da952fd6dbd6d7"
+  },
+  {
+    "path": "assets/screenshots/file-transfer-preflight/en-desktop-02.jpg",
+    "source_url": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/b7/f5/a4/b7f5a4d2-6e85-04a9-d81a-4071b8f4d342/02-filenames.png/800x500bb.jpg",
+    "download_url": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/b7/f5/a4/b7f5a4d2-6e85-04a9-d81a-4071b8f4d342/02-filenames.png/1280x800bb.jpg",
+    "sha256": "31ff9cd48d96f81543ff13e0adee99e67552887a2e78a4947f3005dd12a3b172"
+  },
+  {
+    "path": "assets/screenshots/file-transfer-preflight/en-desktop-03.jpg",
+    "source_url": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/7a/58/cb/7a58cb96-d5ec-fc13-3680-136deb46461b/03-destination-path.png/800x500bb.jpg",
+    "download_url": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/7a/58/cb/7a58cb96-d5ec-fc13-3680-136deb46461b/03-destination-path.png/1280x800bb.jpg",
+    "sha256": "1eea2af21a29cc8676fbae39fbbde2323da82b3318f0a7bfd7521755e144c078"
+  },
+  {
+    "path": "assets/screenshots/file-transfer-preflight/en-desktop-04.jpg",
+    "source_url": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/af/fc/0e/affc0e0a-b0d4-de78-3218-30ed3e945a5e/04-conflicts.png/800x500bb.jpg",
+    "download_url": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/af/fc/0e/affc0e0a-b0d4-de78-3218-30ed3e945a5e/04-conflicts.png/1280x800bb.jpg",
+    "sha256": "3aedafa2bb19149c54c07cc1319817d1f50ef459a7a795fa533ca359a44d7261"
+  },
+  {
+    "path": "assets/icons/matanenote.jpg",
+    "source_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/5b/8b/8f/5b8b8f8d-2630-a878-84c1-40897ecd582c/AppIcon-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg",
+    "sha256": "95482b3ff70284622285884194d2d2b1c69f823edf34066aba4b73dbf017253f"
+  },
+  {
+    "path": "assets/screenshots/matanenote/ja-iphone-03.jpg",
+    "source_url": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/50/d9/e1/50d9e1b6-113c-09ac-ea7f-69fca064b8f5/0CF4472B-805D-41D8-9A71-35524F3C79D2.png/320x480bb.jpg",
+    "download_url": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/50/d9/e1/50d9e1b6-113c-09ac-ea7f-69fca064b8f5/0CF4472B-805D-41D8-9A71-35524F3C79D2.png/1206x2622bb.jpg",
+    "sha256": "97b42a40404131e6c457e890474315d7dbcdacffc5876eae2093a88bd0963031"
+  },
+  {
+    "path": "assets/screenshots/matanenote/ja-iphone-04.jpg",
+    "source_url": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/02/2e/a6/022ea6db-21d0-37b7-8718-bc171ccddb6a/AAECFD66-E0D1-4FD2-BB80-32081BEA1448.png/320x480bb.jpg",
+    "download_url": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/02/2e/a6/022ea6db-21d0-37b7-8718-bc171ccddb6a/AAECFD66-E0D1-4FD2-BB80-32081BEA1448.png/1206x2622bb.jpg",
+    "sha256": "db0ad551d559819f3771f45b7906e7946f48a626dc12296decb4472ce34050e0"
+  },
+  {
+    "path": "assets/screenshots/matanenote/ja-iphone-02.jpg",
+    "source_url": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/50/6d/00/506d0070-af5b-e1b7-b876-8064bef5c156/02-Registration.png/320x480bb.jpg",
+    "download_url": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/50/6d/00/506d0070-af5b-e1b7-b876-8064bef5c156/02-Registration.png/1206x2622bb.jpg",
+    "sha256": "be6fede9011153969a4f5e30a0a9da390429786b2a430c579d19febe7c75f759"
+  },
+  {
+    "path": "assets/icons/signals.jpg",
+    "source_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/cc/c6/cd/ccc6cd2e-53f4-7a2e-c04b-50b6bf156c0a/AppIcon-0-0-1x_U007ephone-0-1-85-220.png/512x512bb.jpg",
+    "sha256": "9b9376b6bcf2a0ab60dd093f52e610a9a1e7f24fc0d5c81393b7ec49e7f6ff22"
+  },
+  {
+    "path": "assets/screenshots/signals/ja-iphone-01.jpg",
+    "source_url": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/b1/10/f0/b110f060-e636-25cf-36e3-2705b24db799/01-discover.png/320x480bb.jpg",
+    "download_url": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/b1/10/f0/b110f060-e636-25cf-36e3-2705b24db799/01-discover.png/1206x2622bb.jpg",
+    "sha256": "95f1be97657cd3285d6e8103f5ba80d8d58a0b47ee45b4eef2251c6d494d843a"
+  },
+  {
+    "path": "assets/screenshots/signals/ja-iphone-02.jpg",
+    "source_url": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/c4/a8/a8/c4a8a8ee-0c08-3fb5-7875-9a7494bac56c/02-observe.png/320x480bb.jpg",
+    "download_url": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/c4/a8/a8/c4a8a8ee-0c08-3fb5-7875-9a7494bac56c/02-observe.png/1206x2622bb.jpg",
+    "sha256": "7fa1c014815ffc421dbfe8a3bb6d3ee5308219fb304931aed87f495c0ff5e07c"
+  },
+  {
+    "path": "assets/screenshots/signals/ja-iphone-03.jpg",
+    "source_url": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/2b/a6/79/2ba6790a-4bbd-9555-8b15-78775d999cc6/03-watch.png/320x480bb.jpg",
+    "download_url": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/2b/a6/79/2ba6790a-4bbd-9555-8b15-78775d999cc6/03-watch.png/1206x2622bb.jpg",
+    "sha256": "089fe84363f1ea5845191999866913b0e079eec4c0395e500a0cc7d490209b6e"
+  },
+  {
+    "path": "assets/yutchi-developer-avatar.png",
+    "source_url": null,
+    "provenance": "User-approved anonymous developer avatar, generated with image_gen on 2026-10-26; no real person or app icon depicted.",
+    "sha256": "2c0ffc591dc9ad696e9d3f985e162575a45f79c6e121456c3d14326dff5706c4"
+  }
+]
