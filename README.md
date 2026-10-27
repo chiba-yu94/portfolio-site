@@ -37,3 +37,5 @@ Edit central data and the generator rather than individual generated pages. Keep
 The existing `/support/`, `/privacy/`, and `/matanenote/` routes remain available. Product-specific support and policy URLs already used by apps remain unchanged. The support contact is [yutchi.apps@gmail.com](mailto:yutchi.apps@gmail.com).
 
 See [maintenance instructions](docs/maintenance.md) for release verification, screenshots, translations, policy updates, publishing, and rollback.
+
+See the [search discoverability review](docs/search-discoverability/README.md) for the SEO audit, Search Console setup, referral measurement plan, and unpublished File Transfer troubleshooting drafts.
