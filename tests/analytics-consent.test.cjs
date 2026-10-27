@@ -111,7 +111,7 @@ function fixture(options = {}) {
     },
   });
   const config = {
-    enabled: true, measurement_id: ID, canonical_url: CANONICAL,
+    enabled: true, account_settings_reviewed: true, measurement_id: ID, canonical_url: CANONICAL,
     page_title: 'CSV Preflight', language: 'en', consent_version: 1,
     allowed_hashes: ['faq'], app_store_urls: [STORE],
     ...options.config,
@@ -331,9 +331,9 @@ test('page location and referrer exclude query/hash PII and advertising consent 
   for (const field of ['ad_storage', 'ad_user_data', 'ad_personalization']) assert.equal(consent[field], 'denied');
 });
 
-test('disabled, malformed config, missing ID and unapproved location never load analytics', () => {
+test('disabled, unreviewed settings, malformed config, missing ID and unapproved location never load analytics', () => {
   for (const options of [
-    { config: { enabled: false } }, { noConfig: true }, { configText: '{bad-json' },
+    { config: { enabled: false } }, { config: { account_settings_reviewed: false } }, { noConfig: true }, { configText: '{bad-json' },
     { config: { measurement_id: '' } }, { config: { measurement_id: 'G-XXXXXXXXXX' } },
     { config: { measurement_id: 'G-0000000000' } },
     { config: { canonical_url: 'https://example.org/portfolio-site/' } },

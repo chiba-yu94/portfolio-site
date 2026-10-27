@@ -1,6 +1,14 @@
 # Website measurement operations
 
-Prepared 2026-10-27. No deployment or live analytics validation has occurred. `data/measurement.json` is the only configuration source. Analytics defaults to **disabled**; empty IDs are intentional and must not be replaced with examples.
+Prepared 2026-10-27. No deployment or live analytics validation has occurred. `data/measurement.json` is the only configuration source. Analytics defaults to **disabled**; IDs must come from the actual administration interface, never examples.
+
+## Current account preparation
+
+The owner accepted the general GA terms. The actual **Yutchi Apps** property and **Yutchi Apps Website** stream now exist for the official site, with real Measurement ID **`G-74EBNQ9ZC0`**. It is recorded in configuration; `enabled` remains false.
+
+Saved administration settings were checked: Enhanced Measurement OFF after its disable confirmation and a reload; Google Signals and user-provided data not activated; granular location/device collection OFF; advertising personalization disallowed in every region; no Google Ads links; all four optional account-sharing settings OFF. Event and user retention are both two months, with activity-based reset OFF. Google notes a 24-hour delay for retention changes. Email redaction is ON, with 11 supplementary URL-query keys configured.
+
+The separate GDPR data-processing-terms checkbox was still unchecked when inspected and is awaiting the owner's review. `account_settings_reviewed` therefore remains false; both the generator and browser runtime block activation without it. Actual Google network payloads, Realtime receipt, applicable regional obligations, and international processing review remain outstanding. This is preparation, not a completed live measurement test.
 
 ## Search Console
 
@@ -19,6 +27,7 @@ Before setting `account_settings_reviewed` to true, inspect the real administrat
 - **All Enhanced Measurement OFF**, including outbound clicks and history-based pageviews. This prevents duplicate click events and uncontrolled link/query collection. Automatic base GA4 events may still exist.
 - Email/query data redaction enabled as a supplementary safeguard; it is not the site's primary privacy boundary.
 - User/event retention at the shortest suitable offered period (normally two months), activity-based retention reset OFF, and unnecessary granular location/device collection OFF. Retention settings do not delete every standard aggregate report on that schedule.
+- Record the owner's decision on the separate data-processing terms. The owner must review and accept any contract personally; do not infer this from acceptance of the general GA terms.
 
 Then enter the real ID, keeping `enabled:false` until approval and validation. Account creation, settings review, a saved configuration, and live collection are separate completion states. See [Google privacy controls](https://developers.google.com/tag-platform/security/guides/privacy), [consent](https://developers.google.com/tag-platform/security/guides/consent), and [data redaction](https://support.google.com/analytics/answer/13544947?hl=en).
 

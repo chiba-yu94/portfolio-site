@@ -17,7 +17,7 @@
     try {
       const node = document.getElementById('site-measurement-config');
       config = JSON.parse(node ? node.textContent : 'null');
-      if (!config || config.enabled !== true) return;
+      if (!config || config.enabled !== true || config.account_settings_reviewed !== true) return;
       if (window.location.origin !== ORIGIN || !window.location.pathname.startsWith(SCOPE)) return;
       if (!/^G-[A-Z0-9]{10}$/.test(config.measurement_id) || /^(G-XXXXXXXXXX|G-0000000000)$/.test(config.measurement_id)) return;
       if (config.consent_version !== 1 || !['ja', 'en'].includes(config.language)) return;

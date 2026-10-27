@@ -75,7 +75,7 @@ def privacy_notice(lang, settings):
             status + '同意前・拒否後はGoogleの解析タグを読み込まず、解析リクエストも送信しません。コンテンツの閲覧に同意は不要です。',
             '目的はサイトの利用状況とApp Storeリンクのクリックを把握し、案内を改善することです。送信先はGoogleです。同意後は、公開ページのURLとタイトル、流入元のドメイン、許可されたApp Storeリンク、ブラウザ・端末情報、GA4の識別子などが処理されます。通信に伴うIPアドレスもGoogle側で処理されます。クリックは購入・ダウンロード完了を意味しません。',
             'メールアドレス、入力内容、アプリ内の情報、ファイル名・ファイル内容は測定対象にしません。任意のクエリを含むURLや未定義のアンカーでは解析を停止します。UTMなどを含む訪問も測定されない場合があります。広告・リマーケティング・Google Signals・Meta Pixelは使用しません。',
-            '同意の選択だけをこのサイト用のブラウザ保存領域に最長180日保存します。同意した場合のみ、このサイト用のGA4 Cookieを使用します。フッターの「解析の同意設定を変更」から拒否に変更でき、以後の計測を停止して対象Cookieを削除します。既に送信済み・送信開始済みの情報を取り消す操作ではありません。',
+            '同意の選択だけをこのサイト用のブラウザ保存領域に最長180日保存します。同意した場合のみ、このサイト用のGA4 Cookieを使用します。GA4のユーザー・イベントデータは2か月の保持設定です（標準的な集計レポートすべての削除期限ではありません）。フッターの「解析の同意設定を変更」から拒否に変更でき、以後の計測を停止して対象Cookieを削除します。既に送信済み・送信開始済みの情報を取り消す操作ではありません。',
             'これはWebサイトの解析についての説明です。アプリ本体の機能・情報の取り扱いは各アプリ固有のポリシーをご確認ください。この静的サイトはGitHub Pagesで配信し、問い合わせフォームや利用者アカウントはありません。メールリンクはお使いのメールアプリを開きます。Google等による国外での処理についても、以下の各社説明をご確認ください。'
         ]
         title = 'このWebサイトの解析とプライバシー'
@@ -86,7 +86,7 @@ def privacy_notice(lang, settings):
             status + ' No Google analytics tag or measurement request is loaded before consent or after rejection. Consent is optional and is not needed to read the site.',
             'The purpose is to improve product information using website usage and App Store link clicks. Google is the external recipient. After consent, processed data includes public page URLs and titles, the referring domain, approved App Store destinations, browser/device information, and GA4 identifiers. Google also processes the IP address used for the connection. A click is not a completed purchase or download.',
             'Email addresses, entered content, application data, filenames, and file contents are not measurement targets. Measurement stops on URLs containing query parameters or unknown anchors; visits with UTM parameters may therefore be excluded. Advertising, remarketing, Google Signals, and Meta Pixel are not used.',
-            'Only the consent preference is stored in this website’s browser storage for up to 180 days. Its GA4 cookies are used only after consent. Choose Analytics preferences in the footer to reject later: future measurement stops and this integration’s cookies are removed. Withdrawal cannot recall information already sent or requests already started.',
+            'Only the consent preference is stored in this website’s browser storage for up to 180 days. Its GA4 cookies are used only after consent. GA4 user/event data retention is configured to two months; this is not a deletion deadline for every standard aggregate report. Choose Analytics preferences in the footer to reject later: future measurement stops and this integration’s cookies are removed. Withdrawal cannot recall information already sent or requests already started.',
             'This notice describes website measurement. Each application’s own policy continues to describe the app itself. The static website is hosted on GitHub Pages, with no contact form or visitor accounts. Email links open your email app. Review the linked providers’ information, including processing outside your country.'
         ]
         title = 'Website analytics and privacy'
