@@ -39,3 +39,5 @@ The existing `/support/`, `/privacy/`, and `/matanenote/` routes remain availabl
 See [maintenance instructions](docs/maintenance.md) for release verification, screenshots, translations, policy updates, publishing, and rollback.
 
 See the [search discoverability review](docs/search-discoverability/README.md) for the SEO audit, Search Console setup, referral measurement plan, and unpublished File Transfer troubleshooting drafts.
+
+Optional Search Console verification and consent-gated website measurement use `data/measurement.json`, `scripts/measurement.py`, and `analytics.js`. Analytics is disabled by default. See [measurement operations](docs/measurement.md) before changing IDs, consent behavior, campaigns, or deployment settings.
