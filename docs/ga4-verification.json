@@ -1,6 +1,6 @@
 {
   "date": "2026-10-28",
-  "status": "HOLD: production deployment approval and live revalidation pending",
+  "status": "ACTIVE: approved production deployment and real-browser verification passed",
   "candidate_source": "Local generated candidate at production origin; real unmodified Google endpoints",
   "browser": "Chrome 156.0.8078.48",
   "headed_and_headless_checks_passed_each": 85,
@@ -176,20 +176,38 @@
     }
   ],
   "admin_privacy_settings_preserved": true,
-  "current_production_enabled": false,
-  "deployed_enabled_browser_verification": null,
+  "current_production_enabled": true,
+  "deployed_enabled_browser_verification": {
+    "passed": 85,
+    "failed": 0,
+    "mode": "real headed Chrome; unmodified production assets",
+    "google_request_count": 11,
+    "tag_http_200": 5,
+    "collection_http_204": 6,
+    "page_view_requests": 5,
+    "app_store_click_requests": 1,
+    "served_files_match_approved_source": 23,
+    "existing_routes_preserved": 20,
+    "merge_commit": "3986f80b274df7b074a132e42311713efcd0f0d0",
+    "pages_run": 40651065869
+  },
   "current_candidate_realtime_page_view_and_click_observed": true,
-  "production_realtime_recheck": null,
+  "production_realtime_recheck": {
+    "page_view_received": true,
+    "app_store_click_received": true,
+    "observed_increase_from_recorded_candidate_baseline": true
+  },
   "source_sha256": {
     "analytics.js": "03209fdc51c51eef29a1df959dfcaa3720b64213bf8bc5ecd0ba0a4fc7fae592",
     "data/measurement.json": "9ade9b6d4e4ac4e2b913f329c1e2d3e35bd2c5033ee24a25fa3ee92d12b52140",
     "tests/analytics-browser.cjs": "001b1c7e681fbe453f987ea3c818510017eba261a9cd19f8efaa1e96d470061b"
   },
   "limits": [
-    "Candidate site assets were served locally at the production origin; Google responses were real and unmodified. This is not deployed-production validation.",
+    "The candidate evidence below serves local site assets at the production origin. The subsequent 85-check production run used unmodified deployed site assets, with real Google responses in both modes.",
     "Raw cookie/client/session identifiers and authentication data are not recorded. Sample parameters omit automatically generated pseudonymous IDs.",
     "Apple geo is an unrelated App Store session cookie and is not deleted by this website.",
     "Excluded URLs do not create new Google traffic. Cookies from existing consent may remain until withdrawal/expiry.",
     "Withdrawing consent does not delete historical data already received by Google."
-  ]
+  ],
+  "production_approval_received": true
 }
