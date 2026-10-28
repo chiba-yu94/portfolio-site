@@ -2,7 +2,7 @@
 
 Audit date: 2026-10-27. Baseline: `c5a6b4a` on `main`.
 
-This is the pre-integration audit snapshot. See [measurement operations](../measurement.md) for the later, disabled-by-default consent integration and its current activation requirements.
+This is the pre-integration audit snapshot. See [measurement operations](../measurement.md) for the later consent-gated integration and its current activation requirements.
 
 This folder contains review material only. No generated page, product data, application source, account setting, or deployed site was changed. The two troubleshooting guides are drafts; they are not new public routes or sitemap entries.
 

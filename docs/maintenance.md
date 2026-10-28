@@ -48,7 +48,7 @@ Changing a file without updating its recorded hash intentionally fails validatio
 
 ## Support and privacy policies
 
-The public support contact is `yutchi.apps@gmail.com`. A contact change should update the central catalog contact and generator constant together, then regenerate every language page. Mail links are normal `mailto:` links; there is no contact form, visitor account system, or backend. Optional website measurement is controlled separately through `data/measurement.json`, is disabled by default, and requires the [measurement review and validation procedure](measurement.md). Do not infer application analytics from this website setting.
+The public support contact is `yutchi.apps@gmail.com`. A contact change should update the central catalog contact and generator constant together, then regenerate every language page. Mail links are normal `mailto:` links; there is no contact form, visitor account system, or backend. Optional website measurement is controlled separately through `data/measurement.json`, requires explicit activation approval and the [measurement review and validation procedure](measurement.md). Do not infer application analytics from this website setting.
 
 Keep each product's existing support and privacy URL intact. Some policies live in separate public support repositories; a link from this site is not a replacement of those original documents. Coordinate any separate support-site contact change with that repository's deployment.
 

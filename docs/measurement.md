@@ -1,14 +1,14 @@
 # Website measurement operations
 
-Prepared 2026-10-27. No deployment or live analytics validation has occurred. `data/measurement.json` is the only configuration source. Analytics defaults to **disabled**; IDs must come from the actual administration interface, never examples.
+Prepared 2026-10-27. The owner approved production deployment and consent-gated activation on 2026-10-28. Live validation results are recorded separately; this approval alone is not proof of delivery. `data/measurement.json` is the only configuration source. Analytics requires an explicit enabled switch and visitor opt-in; IDs must come from the actual administration interface, never examples.
 
 ## Current account preparation
 
-The owner accepted the general GA terms. The actual **Yutchi Apps** property and **Yutchi Apps Website** stream now exist for the official site, with real Measurement ID **`G-74EBNQ9ZC0`**. It is recorded in configuration; `enabled` remains false.
+The owner accepted the general GA terms. The actual **Yutchi Apps** property and **Yutchi Apps Website** stream now exist for the official site, with real Measurement ID **`G-74EBNQ9ZC0`**. It is recorded in configuration; `enabled` is true for the approved deployment, with visitor opt-in still required.
 
 Saved administration settings were checked: Enhanced Measurement OFF after its disable confirmation and a reload; Google Signals and user-provided data not activated; granular location/device collection OFF; advertising personalization disallowed in every region; no Google Ads links; all four optional account-sharing settings OFF. Event and user retention are both two months, with activity-based reset OFF. Google notes a 24-hour delay for retention changes. Email redaction is ON, with 11 supplementary URL-query keys configured.
 
-The owner has accepted and saved the separate data-processing terms, and a fresh account-settings view confirms the accepted status. All four optional sharing settings were restored to OFF and checked after saving, reloading, and navigating away and back. `account_settings_reviewed` is now true, while `enabled` stays false pending deployment approval. Actual Google network payloads and Realtime receipt remain unverified. Regional and international-processing obligations still require the owner's assessment; this is not legal certification or a completed live measurement test.
+The owner has accepted and saved the separate data-processing terms, and a fresh account-settings view confirms the accepted status. All four optional sharing settings were restored to OFF and checked after saving, reloading, and navigating away and back. `account_settings_reviewed` is true. The owner has approved activation; the production configuration enables the consent-gated runtime. Actual Google network payloads and Realtime receipt remain unverified. Regional and international-processing obligations still require the owner's assessment; this is not legal certification or a completed live measurement test.
 
 ## Search Console
 
