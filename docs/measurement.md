@@ -8,7 +8,7 @@ The owner accepted the general GA terms. The actual **Yutchi Apps** property and
 
 Saved administration settings were checked: Enhanced Measurement OFF after its disable confirmation and a reload; Google Signals and user-provided data not activated; granular location/device collection OFF; advertising personalization disallowed in every region; no Google Ads links; all four optional account-sharing settings OFF. Event and user retention are both two months, with activity-based reset OFF. Google notes a 24-hour delay for retention changes. Email redaction is ON, with 11 supplementary URL-query keys configured.
 
-The separate GDPR data-processing-terms checkbox was still unchecked when inspected and is awaiting the owner's review. `account_settings_reviewed` therefore remains false; both the generator and browser runtime block activation without it. Actual Google network payloads, Realtime receipt, applicable regional obligations, and international processing review remain outstanding. This is preparation, not a completed live measurement test.
+The owner has accepted and saved the separate data-processing terms, and a fresh account-settings view confirms the accepted status. All four optional sharing settings were restored to OFF and checked after saving, reloading, and navigating away and back. `account_settings_reviewed` is now true, while `enabled` stays false pending deployment approval. Actual Google network payloads and Realtime receipt remain unverified. Regional and international-processing obligations still require the owner's assessment; this is not legal certification or a completed live measurement test.
 
 ## Search Console
 
