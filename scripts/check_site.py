@@ -15,6 +15,7 @@ from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import unquote, urljoin, urlsplit
 from xml.etree import ElementTree
+from measurement import load_settings, campaign_url
 
 
 SITE_URL = "https://chiba-yu94.github.io/portfolio-site/"
@@ -451,12 +452,48 @@ class Checker:
             self.errors.append(f"robots.txt: cannot read file ({exc})")
         self.expect((self.root / ".nojekyll").is_file(), ".nojekyll missing for GitHub Pages")
 
+    def check_measurement(self):
+        try:
+            settings = load_settings(self.root, self.products)
+        except (OSError, ValueError, KeyError, TypeError) as exc:
+            self.errors.append(f"measurement configuration: {exc}")
+            return
+        expected_urls = sorted({campaign_url(settings, p, region) for p in self.products for region in p['store_urls']})
+        for doc in self.pages.values():
+            canonical, _ = self.canonical_for(doc)
+            configs = re.findall(r'<script id="site-measurement-config" type="application/json">(.*?)</script>', doc.raw, re.DOTALL)
+            self.expect(len(configs) == 1, f"{doc.path}: exactly one measurement configuration required")
+            self.expect(doc.raw.count('src="/portfolio-site/analytics.js"') == 1, f"{doc.path}: exactly one local consent runtime required")
+            self.expect(doc.raw.count('data-analytics-settings') == 1, f"{doc.path}: one accessible consent settings entry required")
+            self.expect(doc.raw.count('<meta name="referrer" content="origin">') == 1, f"{doc.path}: origin-only referrer policy required")
+            self.expect(not re.search(r'<script[^>]+src=[\"\'][^\"\']*(?:googletagmanager|google-analytics|connect\.facebook)', doc.raw), f"{doc.path}: third-party tag must not load outside the consent runtime")
+            self.expect('fbq(' not in doc.raw and 'gtag(' not in doc.raw, f"{doc.path}: unexpected inline tracking command")
+            verification = re.findall(r'<meta name="google-site-verification" content="([^"]+)">', doc.raw)
+            expected_token = [settings['google_site_verification']] if canonical == SITE_URL and settings['google_site_verification'] else []
+            self.expect(verification == expected_token, f"{doc.path}: Google verification token does not match settings")
+            try:
+                config = json.loads(configs[0])
+                self.expect(config['canonical_url'] == canonical and config['page_title'] == doc.title, f"{doc.path}: fixed measurement page metadata mismatch")
+                self.expect(config['language'] == doc.lang[0], f"{doc.path}: measurement language mismatch")
+                self.expect(all(config.get(k) == v for k, v in settings['analytics'].items()), f"{doc.path}: stale analytics switches/ID")
+                page_store_links = {urljoin(canonical, href) for href in re.findall(r'\bhref="([^"]+)"', doc.raw)}
+                from html import unescape
+                page_store_links = {unescape(href) for href in page_store_links}
+                self.expect(config['app_store_urls'] == sorted(set(expected_urls) & page_store_links), f"{doc.path}: unapproved App Store measurement URL")
+                self.expect('main' in config['allowed_hashes'] and set(config['allowed_hashes']).issubset(doc.ids), f"{doc.path}: unknown measurement fragment allowlist")
+            except (IndexError, ValueError, KeyError, TypeError) as exc:
+                self.errors.append(f"{doc.path}: malformed measurement config ({exc})")
+        for lang in ('', 'en/'):
+            path = self.root / lang / 'privacy-policies/index.html'
+            self.expect('id="website-privacy"' in path.read_text(encoding='utf-8'), f"{path}: website-specific privacy notice missing")
+
     def run(self):
         self.check_catalog()
         self.check_manifest()
         self.discover_pages()
         self.check_pages()
         self.check_search_files()
+        self.check_measurement()
         return self.errors
 
 
@@ -473,7 +510,7 @@ def main():
         return 1
     print(f"PASS: {len(checker.pages)} pages, {len(checker.products)} released apps, "
           f"{len(checker.manifest_paths)} asset hashes, internal links and anchors, "
-          "bilingual metadata, structured data, and search files.")
+          "bilingual metadata, structured data, search files, and consent-gated measurement configuration.")
     return 0
 
 
