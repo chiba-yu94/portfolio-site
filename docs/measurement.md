@@ -2,13 +2,30 @@
 
 Prepared 2026-10-27. The owner approved production deployment and consent-gated activation on 2026-10-28. Live validation results are recorded separately; this approval alone is not proof of delivery. `data/measurement.json` is the only configuration source. Analytics requires an explicit enabled switch and visitor opt-in; IDs must come from the actual administration interface, never examples.
 
-## Current account preparation
+## Current verification status (2026-10-28)
 
-The owner accepted the general GA terms. The actual **Yutchi Apps** property and **Yutchi Apps Website** stream now exist for the official site, with real Measurement ID **`G-74EBNQ9ZC0`**. The ID is preserved in configuration. `enabled` is now false under a network/cookie verification HOLD. After deployment, the runtime stays disabled on the next page load, including for visitors with a saved opt-in. This static configuration cannot recall an already loaded Google runtime in an existing tab.
+The dedicated reactivation branch sets `analytics.enabled:true`; deployed production remains disabled at merge `5a01e98` until explicit deployment approval. The real ID **`G-74EBNQ9ZC0`**, reviewed-settings flag, consent behavior and App Store click mechanism are unchanged. No analytics runtime fix was required.
 
-Saved administration settings were checked: Enhanced Measurement OFF after its disable confirmation and a reload; Google Signals and user-provided data not activated; granular location/device collection OFF; advertising personalization disallowed in every region; no Google Ads links; all four optional account-sharing settings OFF. Event and user retention are both two months, with activity-based reset OFF. Google notes a 24-hour delay for retention changes. Email redaction is ON, with 11 supplementary URL-query keys configured.
+Real isolated Chrome tests passed **85 checks in each of headed and headless Chrome**. Only the local candidate site's responses were served at the production origin; Google's tag and collection endpoints were real, unmodified network requests. The test observed five tag loads (HTTP 200), five `page_view` requests and one approved `click` (six collection responses, HTTP 204). Fresh/rejected requests and cookies were zero. Withdrawal removed both owned cookies and generated no further Google traffic, including reloads, Japanese/English navigation and cross-tab withdrawal. Query strings, UTM parameters and unknown fragments remained excluded. These observations do not establish deployed-production success; see [sanitized network/cookie evidence](ga4-verification.json).
 
-The owner has accepted and saved the separate data-processing terms, and a fresh account-settings view confirms the accepted status. All four optional sharing settings were restored to OFF and checked after saving, reloading, and navigating away and back. `account_settings_reviewed` remains true. Following the approved activation, GA4 Realtime confirmed two `page_view` events (the initial visit and return from the App Store), one `click`, and the canonical page URL. Browser network and cookie inspection could not be completed, so Realtime receipt does not close the privacy validation. The required fallback is `enabled:false` until the remaining checks can be completed under the approved validation procedure. Regional and international-processing obligations still require the owner's assessment; this is not legal certification or a completed live measurement test.
+The two observed cookies are `yutchi_portfolio_ga` and `yutchi_portfolio_ga_74EBNQ9ZC0`: host-only, `/portfolio-site/`, Secure, SameSite=Lax, bounded to 180 days. No Google third-party cookie was observed. An unrelated Apple `geo` session cookie may be created during App Store navigation; the website neither owns nor deletes it. Existing analytics cookies may remain on an excluded URL without new Google traffic; withdrawal removes them. Previously transmitted Google data is not deleted by withdrawing consent.
+
+The existing administration settings were rechecked without changes: Enhanced Measurement OFF, Signals and user-provided data not activated, granular collection OFF, advertising personalization allowed in 0 of 307 regions, Google Ads links 0, optional sharing 4 OFF, event/user retention two months and activity reset OFF. Email/query redaction remains enabled. The owner previously accepted and saved the general and data-processing terms. This technical verification is not a legal certification.
+
+### Repeatable real-browser verification
+
+Use an existing Playwright installation (for example through `NODE_PATH`) and installed Google Chrome. No additional package or framework is required. The runner uses fresh unauthenticated contexts, reads actual requests via Playwright/CDP and reads real cookies. It does not access the user's browser profile or save raw traces/cookie values. App Store document navigation is aborted where routing applies; the trusted outbound click and Google event remain real.
+
+```sh
+GA4_EVIDENCE_DIR=/tmp/yutchi-ga4-candidate node tests/analytics-browser.cjs
+GA4_TEST_MODE=disabled GA4_EVIDENCE_DIR=/tmp/yutchi-ga4-disabled node tests/analytics-browser.cjs
+# Only after approved deployment:
+GA4_TEST_MODE=production GA4_HEADED=1 GA4_EVIDENCE_DIR=/tmp/yutchi-ga4-production node tests/analytics-browser.cjs
+```
+
+`candidate` serves generated local site assets at their production URLs; Google responses are never mocked. `disabled` checks the unchanged public site's safe state. `production` uses deployed assets without the candidate override. A same-document hash change out of an initially blocked URL does not initialize analytics; the allowed-fragment test explicitly reloads the document. Set `GA4_HEADED=1` for visible Chrome. Network observation windows and browser version are recorded, not generalized to every browser. Realtime also displayed candidate page views and the App Store click; aggregate Realtime counts are not the isolated request counts in the evidence.
+
+Before production approval, build/check, the 12 offline boundary tests and real candidate tests must pass. After approval, deploy through existing Pages, repeat the real-browser matrix against production, verify Realtime page and App Store click receipt, and preserve existing routes. A critical failure requires `enabled:false`, regeneration, deployment and verification of the disabled version. Already loaded tabs need a reload to receive static configuration changes.
 
 ## Search Console
 

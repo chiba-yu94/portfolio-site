@@ -1,0 +1,195 @@
+{
+  "date": "2026-10-28",
+  "status": "HOLD: production deployment approval and live revalidation pending",
+  "candidate_source": "Local generated candidate at production origin; real unmodified Google endpoints",
+  "browser": "Chrome 156.0.8078.48",
+  "headed_and_headless_checks_passed_each": 85,
+  "production_disabled_checks_passed": 8,
+  "request_count": 11,
+  "response_status_counts": {
+    "200": 5,
+    "204": 6
+  },
+  "events": {
+    "page_view": 5,
+    "click": 1
+  },
+  "zero_new_requests_observed": [
+    "before consent",
+    "rejected across reload/languages",
+    "after withdrawal, return and reload",
+    "fresh query strings and unknown fragment",
+    "accepted preference on excluded query/fragment URLs",
+    "cross-tab withdrawal"
+  ],
+  "stages": [
+    {
+      "name": "before-consent-ja",
+      "cumulative_google_requests": 0,
+      "cdp_cumulative_google_requests": 0,
+      "owned_cookie_names": [],
+      "other_cookie_names": [],
+      "consent": null
+    },
+    {
+      "name": "rejected-en-product",
+      "cumulative_google_requests": 0,
+      "cdp_cumulative_google_requests": 0,
+      "owned_cookie_names": [],
+      "other_cookie_names": [],
+      "consent": "rejected"
+    },
+    {
+      "name": "accepted-ja",
+      "cumulative_google_requests": 2,
+      "cdp_cumulative_google_requests": 2,
+      "owned_cookie_names": [
+        "yutchi_portfolio_ga_74EBNQ9ZC0",
+        "yutchi_portfolio_ga"
+      ],
+      "other_cookie_names": [],
+      "consent": "accepted"
+    },
+    {
+      "name": "accepted-en-product-and-click",
+      "cumulative_google_requests": 5,
+      "cdp_cumulative_google_requests": 5,
+      "owned_cookie_names": [
+        "yutchi_portfolio_ga",
+        "yutchi_portfolio_ga_74EBNQ9ZC0"
+      ],
+      "other_cookie_names": [
+        "geo"
+      ],
+      "consent": "accepted"
+    },
+    {
+      "name": "withdrawn-en-product",
+      "cumulative_google_requests": 5,
+      "cdp_cumulative_google_requests": 5,
+      "owned_cookie_names": [],
+      "other_cookie_names": [
+        "geo"
+      ],
+      "consent": "rejected"
+    },
+    {
+      "name": "withdrawn-returned",
+      "cumulative_google_requests": 5,
+      "cdp_cumulative_google_requests": 5,
+      "owned_cookie_names": [],
+      "other_cookie_names": [
+        "geo"
+      ],
+      "consent": "rejected"
+    },
+    {
+      "name": "filtered-fresh",
+      "cumulative_google_requests": 0,
+      "cdp_cumulative_google_requests": 0,
+      "owned_cookie_names": [],
+      "other_cookie_names": [],
+      "consent": null
+    },
+    {
+      "name": "filtered-with-existing-consent",
+      "cumulative_google_requests": 2,
+      "cdp_cumulative_google_requests": 2,
+      "owned_cookie_names": [
+        "yutchi_portfolio_ga",
+        "yutchi_portfolio_ga_74EBNQ9ZC0"
+      ],
+      "other_cookie_names": [],
+      "consent": "accepted"
+    },
+    {
+      "name": "cross-tab-withdrawn",
+      "cumulative_google_requests": 4,
+      "cdp_cumulative_google_requests": 4,
+      "owned_cookie_names": [],
+      "other_cookie_names": [],
+      "consent": "rejected"
+    }
+  ],
+  "analytics_cookie_attributes": {
+    "domain": "chiba-yu94.github.io",
+    "path": "/portfolio-site/",
+    "httpOnly": false,
+    "secure": true,
+    "sameSite": "Lax"
+  },
+  "cookie_lifetime_max_days": 180,
+  "sample_real_requests": [
+    {
+      "kind": "loader",
+      "destination": "https://www.googletagmanager.com/gtag/js",
+      "status": 200,
+      "http_referrer": "",
+      "parameters": [
+        {
+          "id": "G-74EBNQ9ZC0"
+        }
+      ]
+    },
+    {
+      "kind": "page_view",
+      "destination": "https://www.google-analytics.com/g/collect",
+      "status": 204,
+      "http_referrer": "https://chiba-yu94.github.io/",
+      "parameters": [
+        {
+          "tid": "G-74EBNQ9ZC0",
+          "gcs": "G101",
+          "gcd": "13p3t3p3p7l1",
+          "npa": "1",
+          "dl": "https://chiba-yu94.github.io/portfolio-site/",
+          "dt": "Yutchi Apps — 小さくて使いやすいmacOS・iOSアプリ",
+          "dr": "https://example.com",
+          "en": "page_view",
+          "ep.ads_data_redaction": "true",
+          "ep.url_passthrough": "false"
+        }
+      ]
+    },
+    {
+      "kind": "click",
+      "destination": "https://www.google-analytics.com/g/collect",
+      "status": 204,
+      "http_referrer": "https://chiba-yu94.github.io/",
+      "parameters": [
+        {
+          "tid": "G-74EBNQ9ZC0",
+          "gcs": "G101",
+          "gcd": "13p3t3p3p7l1",
+          "npa": "1",
+          "dl": "https://chiba-yu94.github.io/portfolio-site/en/apps/file-transfer-preflight/",
+          "dt": "File Transfer Preflight | Yutchi Apps",
+          "dr": "",
+          "en": "click",
+          "ep.ads_data_redaction": "true",
+          "ep.url_passthrough": "false",
+          "ep.link_url": "https://apps.apple.com/us/app/file-transfer-preflight/id6820943200",
+          "ep.link_domain": "apps.apple.com",
+          "ep.outbound": "true"
+        }
+      ]
+    }
+  ],
+  "admin_privacy_settings_preserved": true,
+  "current_production_enabled": false,
+  "deployed_enabled_browser_verification": null,
+  "current_candidate_realtime_page_view_and_click_observed": true,
+  "production_realtime_recheck": null,
+  "source_sha256": {
+    "analytics.js": "03209fdc51c51eef29a1df959dfcaa3720b64213bf8bc5ecd0ba0a4fc7fae592",
+    "data/measurement.json": "9ade9b6d4e4ac4e2b913f329c1e2d3e35bd2c5033ee24a25fa3ee92d12b52140",
+    "tests/analytics-browser.cjs": "001b1c7e681fbe453f987ea3c818510017eba261a9cd19f8efaa1e96d470061b"
+  },
+  "limits": [
+    "Candidate site assets were served locally at the production origin; Google responses were real and unmodified. This is not deployed-production validation.",
+    "Raw cookie/client/session identifiers and authentication data are not recorded. Sample parameters omit automatically generated pseudonymous IDs.",
+    "Apple geo is an unrelated App Store session cookie and is not deleted by this website.",
+    "Excluded URLs do not create new Google traffic. Cookies from existing consent may remain until withdrawal/expiry.",
+    "Withdrawing consent does not delete historical data already received by Google."
+  ]
+}
