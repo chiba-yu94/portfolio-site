@@ -15,6 +15,14 @@
         "ja": "取り込み前にCSVの構造、重複、文字の問題をMac内で確認。",
         "en": "Check CSV structure, duplicates, and character issues before importing."
       },
+      "seo_title": {
+        "ja": "CSV Preflight — Mac用CSV事前検査ツール（文字コード・列数・重複行チェック） | Yutchi Apps",
+        "en": "CSV Preflight — Mac CSV Validator for Encoding, Columns & Duplicates | Yutchi Apps"
+      },
+      "seo_description": {
+        "ja": "システムや会計・ECツールへの取り込み前に、CSVの文字コード（UTF-8／BOM付きUTF-16）、区切り文字、列数ずれ、重複行、不可視文字、列ごとの文字数・バイト数上限をMac内で非破壊検査する買い切りアプリ。",
+        "en": "Inspect CSV files locally on your Mac before import. Check UTF-8 and BOM-marked UTF-16 encoding, delimiters, quoting, column counts, duplicate rows, hidden characters, and per-column byte limits."
+      },
       "features": {
         "ja": [
           "UTF-8／BOM付きUTF-16、区切り文字、引用符、改行を検査",
@@ -87,6 +95,14 @@
           [
             "ファイルを外部へ送信しますか？",
             "検査はMac内で行います。アカウントやクラウドへのアップロードは必要ありません。"
+          ],
+          [
+            "Shift-JISやCP932のCSVは検査できますか？",
+            "現在のバージョン（v1.0.0）はUTF-8とBOM付きUTF-16に対応しており、Shift-JISやWindowsのCP932など、それ以外の文字コードは未対応として検出・通知します。構造や列ルールを検査する場合は、元の作成ツールやエディタでUTF-8またはBOM付きUTF-16として出力し直してください。"
+          ],
+          [
+            "特定の列だけ必須チェックや文字数・バイト数の上限を確認できますか？",
+            "はい。選択した列に対して、値の必須チェック、一意性（重複）チェック、文字数上限、UTF-8バイト数上限のルールを設定して検査できます。"
           ]
         ],
         "en": [
@@ -101,6 +117,14 @@
           [
             "Do files leave my Mac?",
             "Inspection is local. No account or cloud upload is needed."
+          ],
+          [
+            "Can it inspect Shift-JIS or other legacy regional encodings?",
+            "Version 1.0.0 supports UTF-8 and BOM-marked UTF-16, and reports other encodings as unsupported before import. To inspect row structure and column rules, export a UTF-8 or BOM-marked UTF-16 copy from the original tool."
+          ],
+          [
+            "Can I check specific columns for duplicates or byte-length limits?",
+            "Yes. You can apply optional per-column rules for required values, uniqueness, character count, and UTF-8 byte length."
           ]
         ]
       },
@@ -185,6 +209,14 @@
         "ja": "フォルダやZIPを渡す前に、ファイル名とパスの互換性を確認。",
         "en": "Check filenames and paths before handing off a folder or ZIP."
       },
+      "seo_title": {
+        "ja": "File Transfer Preflight — フォルダ・ZIPのファイル名・パス長・文字衝突検査（Mac） | Yutchi Apps",
+        "en": "File Transfer Preflight — Check Filename, Path Length & Collisions on Mac | Yutchi Apps"
+      },
+      "seo_description": {
+        "ja": "Windows／Office、OneDrive／SharePoint、クロスプラットフォームZIPの受け渡し前に、禁止文字、予約名、パス長超過、大小文字・Unicode（NFC／NFD）の名前衝突をMac内で展開せずに検査。",
+        "en": "Inspect folders and ZIP archives locally on macOS before delivery. Catch Windows/Office, OneDrive/SharePoint, and cross-platform ZIP invalid characters, long paths, and case or Unicode collisions."
+      },
       "features": {
         "ja": [
           "Windows／Office、OneDrive／SharePoint、クロスプラットフォームZIPの検査プロファイル",
@@ -257,6 +289,14 @@
           [
             "受け渡し後の動作を保証できますか？",
             "いいえ。ファイル内容や相手のアプリで正常に開けることは検証しません。検出結果は受け渡し前の確認に役立てるための情報です。"
+          ],
+          [
+            "ファイル名やパス長の警告が出た場合はどう進めればよいですか？",
+            "元のファイルは変更されないため、検出理由と対処案を確認し、受け渡し先のルールに合わせて作業用コピーの名前やフォルダ階層を手動で調整したうえで、最終的なフォルダや再作成したZIPを再検査してください。"
+          ],
+          [
+            "大小文字やUnicode（NFC／NFD）の衝突が検出された場合は？",
+            "名前が似ていてもファイル内容が同じとは限りません。該当するすべての項目と参照箇所を確認し、必要なファイルには転送先でも明確に区別できる名前を付けてから再検査してください。"
           ]
         ],
         "en": [
@@ -271,6 +311,14 @@
           [
             "Does a clean result guarantee a successful transfer?",
             "No. It does not validate file contents or opening files in recipient apps. Findings are guidance for review before handoff."
+          ],
+          [
+            "What should I do after a filename or path-length warning?",
+            "Keep your originals intact, review the reported explanation and suggested action, make agreed manual changes on your delivery copy, and rescan the final folder or rebuilt ZIP before handoff."
+          ],
+          [
+            "How should I handle a case or Unicode collision?",
+            "Similar names do not establish identical file contents. Inspect every affected entry and project reference, rename necessary files so they remain distinct on the destination system, and rescan."
           ]
         ]
       },
@@ -355,6 +403,14 @@
         "ja": "前回の会話と次の話題を残せる、接客メモアプリ。",
         "en": "Keep customer conversation notes ready for the next visit."
       },
+      "seo_title": {
+        "ja": "またねノート — 接客・サロン・営業の会話メモ＆顧客話題整理アプリ（iOS） | Yutchi Apps",
+        "en": "MataneNote — Customer Conversation & Visit Notes for iPhone/iPad | Yutchi Apps"
+      },
+      "seo_description": {
+        "ja": "お客様ごとに「話したこと」「これからの話題」「避けたい話題」を端末内に整理し、接客前に素早く検索・確認できるiPhone／iPad向け接客メモアプリ。",
+        "en": "Organize past conversations, future topics, and topics to avoid for each customer locally on iPhone and iPad, and search notes quickly before the next visit."
+      },
       "features": {
         "ja": [
           "お客様ごとに、話したこと・これからの話題・避けたい話題を整理",
@@ -422,6 +478,10 @@
           [
             "メモはどこに保存されますか？",
             "端末内に保存します。入力したメモを開発者のサーバーへ送信しません。QRでの受け渡しはProの機能です。"
+          ],
+          [
+            "どのような仕事や場面に向いていますか？",
+            "美容室・サロン、飲食・接客、個人店舗、営業など、お客様との会話を覚えておきたい場面に向いています。話したこと・次の話題・避けたい話題を分けて整理し、接客前にすぐ見返せます。"
           ]
         ],
         "en": [
@@ -436,6 +496,10 @@
           [
             "Where are notes stored?",
             "Notes are stored on your device and are not sent to the developer’s server. QR handoff is a Pro feature."
+          ],
+          [
+            "What kinds of work is MataneNote designed for?",
+            "It fits salons, hospitality, independent shops, and client-facing roles where remembering each person’s context matters. Separate past conversations, future topics, and topics to avoid for quick review before a visit."
           ]
         ]
       },
@@ -514,6 +578,14 @@
       "summary": {
         "ja": "バーコードから小さな情報生命体を発見し、Watchへ連れ出す。",
         "en": "Discover little code creatures from barcodes and take a favorite to Apple Watch."
+      },
+      "seo_title": {
+        "ja": "SIGNALS: Code Creatures — バーコードから情報生命体を発見・Apple Watch対応（iOS） | Yutchi Apps",
+        "en": "SIGNALS: Code Creatures — Barcode Creature Collection for iPhone & Apple Watch | Yutchi Apps"
+      },
+      "seo_description": {
+        "ja": "身近なバーコードの読み取りや手入力から小さな情報生命体を発見・観察するiPhone向けコレクションゲーム。同じコードから同じ個体に再会でき、お気に入りの1体をApple Watchへ連れ出せます。",
+        "en": "Discover and observe code creatures from everyday barcodes on iPhone. Meet the same creature from the same code and bring one favorite to Apple Watch."
       },
       "features": {
         "ja": [
