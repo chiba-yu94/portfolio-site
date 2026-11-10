@@ -92,6 +92,29 @@
     "sha256": "089fe84363f1ea5845191999866913b0e079eec4c0395e500a0cc7d490209b6e"
   },
   {
+    "path": "assets/icons/release-preflight.png",
+    "source_url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/39/61/4f/39614f43-809f-dfa1-90ae-b5bebcbd8910/AppIcon-0-0-85-220-0-5-0-2x.png/512x512bb.png",
+    "sha256": "4d00e98f4244f623bc9044b42d276a44f19ea62e0017a2409146368aaa2bdba8"
+  },
+  {
+    "path": "assets/screenshots/release-preflight/02-secrets.png",
+    "source_url": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/8c/b3/97/8cb397db-39a1-56d9-6e92-d82bdf03d67a/02-secrets.png/800x500bb.jpg",
+    "provenance": "Original 1280×800 PNG from the English App Store screenshot set.",
+    "sha256": "85a577ff91ad127b677660fed236548b361edc78272f4404d396fe9a0cd7ce62"
+  },
+  {
+    "path": "assets/screenshots/release-preflight/03-dependencies.png",
+    "source_url": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/94/dd/04/94dd04fe-0ee0-5272-5cac-87de68c736e6/03-dependencies.png/800x500bb.jpg",
+    "provenance": "Original 1280×800 PNG from the English App Store screenshot set.",
+    "sha256": "f9d929d8896a4ac529a96997edb5eb5a0047bd5e8efdd6b2228a7b9584def961"
+  },
+  {
+    "path": "assets/screenshots/release-preflight/04-configuration.png",
+    "source_url": "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/94/9e/21/949e2191-8b12-1094-ea46-4cea5c8ba9b6/04-configuration.png/800x500bb.jpg",
+    "provenance": "Original 1280×800 PNG from the English App Store screenshot set.",
+    "sha256": "e1a833b216c80a4d8a7655096c4e0b010f884c24d6dcf06c6e2c3e250054e020"
+  },
+  {
     "path": "assets/yutchi-developer-avatar.png",
     "source_url": null,
     "provenance": "User-approved anonymous developer avatar, generated with image_gen on 2026-10-26; no real person or app icon depicted.",
