@@ -392,6 +392,188 @@
       }
     },
     {
+      "id": "release-preflight",
+      "store_name": "Release Preflight",
+      "name": {
+        "ja": "Release Preflight",
+        "en": "Release Preflight"
+      },
+      "platform": "macOS",
+      "summary": {
+        "ja": "ソフトウェアの配布前に、秘密情報の混入や開発用設定をMacでチェック。",
+        "en": "Check for exposed secrets and development settings before you ship software."
+      },
+      "seo_title": {
+        "ja": "Release Preflight — Macでソフトウェア配布前にセキュリティチェック | Yutchi Apps",
+        "en": "Release Preflight — Pre-release Security Checks for Mac | Yutchi Apps"
+      },
+      "seo_description": {
+        "ja": "フォルダ、ZIP、macOSアプリ、XcodeアーカイブをMacで検査。秘密情報に似たパターンや開発用設定を確認し、HTML・JSONレポートに書き出せます。",
+        "en": "Inspect folders, ZIPs, macOS apps, and Xcode archives for possible exposed secrets and development settings. Review findings and export HTML or JSON reports."
+      },
+      "features": {
+        "ja": [
+          "選択したフォルダ、ZIP、macOSアプリ、XcodeアーカイブをMac上で検査",
+          "APIキーや秘密鍵に似たパターン、機密ファイル、開発用の接続先やデバッグ設定を確認。秘密値は画面やレポートでマスク",
+          "プロパティリスト、entitlementsファイル、署名済みアプリの権限情報を確認",
+          "対応する依存関係ファイルからパッケージを一覧化。設定を有効にすると、npm、PyPI、crates.io、RubyGemsの確定バージョンをOSVの既知の脆弱性情報と照合",
+          "検出理由と対処案を確認し、HTMLまたはJSONレポートを書き出し"
+        ],
+        "en": [
+          "Inspect selected folders, ZIPs, macOS apps, and Xcode archives on your Mac",
+          "Flag patterns that resemble API keys or private keys, plus sensitive files, development endpoints, and debug settings. Secret values are masked in the app and reports.",
+          "Inspect property lists, entitlement files, and signed app entitlement metadata",
+          "List dependencies from supported manifests and lockfiles. Optionally look up known advisories for exact npm, PyPI, crates.io, and RubyGems versions through OSV.",
+          "Review why each finding was flagged, see suggested next steps, and export HTML or JSON reports"
+        ]
+      },
+      "limits": {
+        "ja": [
+          "選択した対象を静的に検査します。検出結果やスコアだけでは安全性を判断できません。",
+          "元のファイルは変更しません。対象外、読み取り不能、大容量、バイナリなどの内容は別途確認が必要です。",
+          "Swiftパッケージは一覧化します。既知の脆弱性情報は手動で確認してください。"
+        ],
+        "en": [
+          "Passive checks cover specific rules and patterns. A clean result or high score does not establish that a release is secure.",
+          "The app leaves originals intact. Excluded, unreadable, large, and binary content may need separate review.",
+          "Swift packages are listed for manual advisory review."
+        ]
+      },
+      "privacy": {
+        "ja": "ソースコードやファイル内容はMacの外へ送信しません。OSVへの照会は初期状態ではオフです。有効にすると、パッケージの種類・名前・バージョンと、照会に必要なページング情報を送信します。通信時にはOSVに接続元IPアドレスが伝わります。",
+        "en": "Source code and file contents stay on your Mac. OSV lookup is off by default. When enabled, it sends the package ecosystem, name, version, and any required OSV pagination tokens. OSV sees the connection’s IP address."
+      },
+      "category": "Developer Tools",
+      "version": "1.0.0",
+      "verified_date": "2026-11-10",
+      "release_status": "released",
+      "availability": {
+        "us": true,
+        "jp": true
+      },
+      "store_url": "https://apps.apple.com/us/app/release-preflight/id6820354098",
+      "store_urls": {
+        "us": "https://apps.apple.com/us/app/release-preflight/id6820354098",
+        "jp": "https://apps.apple.com/jp/app/release-preflight/id6820354098"
+      },
+      "source_urls": [
+        "https://itunes.apple.com/lookup?id=6820354098&country=us",
+        "https://itunes.apple.com/lookup?id=6820354098&country=jp",
+        "https://apps.apple.com/us/app/release-preflight/id6820354098",
+        "https://apps.apple.com/jp/app/release-preflight/id6820354098",
+        "https://chiba-yu94.github.io/preflight-tools-site/ja/release-preflight/privacy/",
+        "https://chiba-yu94.github.io/preflight-tools-site/release-preflight/privacy/",
+        "https://chiba-yu94.github.io/preflight-tools-site/ja/release-preflight/support/",
+        "https://chiba-yu94.github.io/preflight-tools-site/release-preflight/support/"
+      ],
+      "problem": {
+        "ja": "配布前に、パッケージの中身をもう一度確認。",
+        "en": "Give your release files a final check."
+      },
+      "audience": {
+        "ja": "個人開発者や小規模チーム向け。配布予定のファイルを選ぶと、秘密情報に似た値や開発時の設定など、公開前に見直したい項目がまとまります。",
+        "en": "For indie developers and small teams. Select what you plan to distribute and review possible secrets, development settings, and other findings before sharing it."
+      },
+      "faq": {
+        "ja": [
+          [
+            "オフラインで使えますか？",
+            "はい。通常の検査はMac内で完結します。OSVで依存関係の情報を照会する場合のみ、検査時にインターネット接続が必要です。"
+          ],
+          [
+            "元のファイルは変更されますか？",
+            "検査は読み取り専用です。ZIPは展開せずに読み取り、対処が必要な箇所は結果を見ながら手動で修正します。"
+          ],
+          [
+            "すべての脆弱性を検出できますか？",
+            "実装済みのルールと、任意で有効にしたOSV照会の範囲で確認できます。アプリの実行時の動作や、報告されたアドバイザリが実際に当てはまるかは別途確認してください。"
+          ]
+        ],
+        "en": [
+          [
+            "Can I use it offline?",
+            "Yes. The standard scan runs on your Mac. The optional OSV dependency lookup requires an internet connection."
+          ],
+          [
+            "Does it change my files?",
+            "Inspection is read-only. ZIPs are read without extraction, and you can use the findings to make any changes yourself."
+          ],
+          [
+            "Can it find every vulnerability?",
+            "It applies a defined set of rules and can look up known dependency advisories when OSV lookup is enabled. Review runtime behavior and advisory applicability separately."
+          ]
+        ]
+      },
+      "support_note": {
+        "ja": "検査するフォルダ、ZIP、macOSアプリ、Xcodeアーカイブを選択します。検出結果を確認し、必要に応じてHTMLまたはJSONで保存できます。レポートを共有する前に、相対パスや依存関係の情報をご確認ください。",
+        "en": "Select a folder, ZIP, macOS app, or Xcode archive. Review the findings and export HTML or JSON if needed. Check relative paths and dependency details before sharing a report."
+      },
+      "support_url": {
+        "ja": "https://chiba-yu94.github.io/preflight-tools-site/ja/release-preflight/support/",
+        "en": "https://chiba-yu94.github.io/preflight-tools-site/release-preflight/support/"
+      },
+      "privacy_url": {
+        "ja": "https://chiba-yu94.github.io/preflight-tools-site/ja/release-preflight/privacy/",
+        "en": "https://chiba-yu94.github.io/preflight-tools-site/release-preflight/privacy/"
+      },
+      "os": {
+        "ja": "macOS 14以降",
+        "en": "macOS 14+"
+      },
+      "languages": {
+        "ja": "日本語・英語",
+        "en": "English & Japanese"
+      },
+      "price": {
+        "ja": "¥4,000 · 買い切り",
+        "en": "$24.99 · one-time purchase"
+      },
+      "schema_price": 24.99,
+      "currency": "USD",
+      "icon": "assets/icons/release-preflight.png",
+      "screenshots": [
+        {
+          "src": "assets/screenshots/release-preflight/02-secrets.png",
+          "width": 1280,
+          "height": 800,
+          "alt": {
+            "ja": "秘密鍵に似たパターンの検出結果と対処案（英語画面）",
+            "en": "A possible exposed secret and suggested next steps (English UI)"
+          }
+        },
+        {
+          "src": "assets/screenshots/release-preflight/04-configuration.png",
+          "width": 1280,
+          "height": 800,
+          "alt": {
+            "ja": "デバッグ設定などの構成チェック結果（英語画面）",
+            "en": "Configuration findings, including enabled debug mode (English UI)"
+          }
+        },
+        {
+          "src": "assets/screenshots/release-preflight/03-dependencies.png",
+          "width": 1280,
+          "height": 800,
+          "alt": {
+            "ja": "オプションのOSV照会による依存関係の警告（英語画面）",
+            "en": "Dependency advisories from the optional OSV lookup (English UI)"
+          }
+        }
+      ],
+      "prices": {
+        "us": {
+          "price": 24.99,
+          "formattedPrice": "$24.99",
+          "currency": "USD"
+        },
+        "jp": {
+          "price": 4000.0,
+          "formattedPrice": "¥4,000",
+          "currency": "JPY"
+        }
+      }
+    },
+    {
       "id": "matanenote",
       "store_name": "またねノート",
       "name": {

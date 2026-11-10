@@ -24,7 +24,7 @@ Do not edit generated `index.html` files as the source of a change; the next bui
 4. Add the app's original support and privacy URLs. Keep URLs already embedded in released apps valid; changing this website does not change Apple metadata or an app binary.
 5. Build, run the checker, and visually review both language versions on desktop and mobile before publishing.
 
-Only verified released apps belong in the public catalog. Release Preflight currently has an explicit exclusion guard in the checker. After a future public release is independently confirmed, review that guard deliberately together with the new catalog entry. Do not remove it merely to make an unverified entry pass.
+Only verified released apps belong in the public catalog. The standalone Perchaps beta privacy policy at `/itsutsuki/privacy/` is maintained separately from the generated catalog. It stays outside the catalog sitemap and generated-page checks.
 
 Never invent reviews, ratings, awards, download counts, or security guarantees. SoftwareApplication structured data must reflect the verified regional product record. Do not add aggregate ratings or review markup without a separately authorized, verifiable source and an explicit review of the checker rules.
 

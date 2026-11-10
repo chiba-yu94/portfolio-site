@@ -22,12 +22,13 @@ SITE_URL = "https://chiba-yu94.github.io/portfolio-site/"
 CONTACT = "yutchi.apps@gmail.com"
 LANGUAGES = ("ja", "en")
 LEGACY_ROUTES = ("support/", "privacy/", "matanenote/")
+STANDALONE_PAGES = {"itsutsuki/privacy/index.html"}
 LOCALIZED_FIELDS = (
     "name", "summary", "features", "limits", "privacy", "problem", "audience",
     "faq", "support_note", "os", "languages", "price", "support_url", "privacy_url",
 )
 FORBIDDEN = re.compile(
-    r"Release\s+Preflight|release-preflight|6820354098|Chiba\s*Apps|"
+    r"Chiba\s*Apps|"
     r"PIXEL\s*NAPS|Behind[\s_-]*the[\s_-]*Specs", re.IGNORECASE
 )
 
@@ -303,6 +304,8 @@ class Checker:
     def discover_pages(self):
         for path in sorted(self.root.rglob("index.html")):
             relative = path.relative_to(self.root)
+            if relative.as_posix() in STANDALONE_PAGES:
+                continue
             if any(part.startswith(".") for part in relative.parts) or relative.parts[0] in ("assets", "data", "docs", "scripts"):
                 continue
             try:
